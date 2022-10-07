@@ -36,7 +36,7 @@ DEBUG = True
 PASSWORD_SALT = env('PASSWORD_SALT')
 
 ALLOWED_HOSTS = []
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
