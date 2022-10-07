@@ -35,7 +35,7 @@ DEBUG = True
 # PASSWORD SALT
 PASSWORD_SALT = env('PASSWORD_SALT')
 
-ALLOWED_HOSTS = ['3.88.21.184']
+ALLOWED_HOSTS = []
 CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'peopleListApp',
+    'corsheaders',
 ]
 
 SIMPLE_JWT = {
@@ -66,6 +67,7 @@ SIMPLE_JWT = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
